@@ -2,6 +2,7 @@ const hours = document.querySelector(".hours");
 const minutes = document.querySelector(".minutes");
 const seconds = document.querySelector(".seconds");
 const day = document.querySelector(".dia");
+const nombreDia = document.querySelector(".nombreDia");
 
 const RELOJ = () => {
   const DATE = new Date();
@@ -14,19 +15,28 @@ const RELOJ = () => {
   hours.style.setProperty("--rotate", HORAS * 360);
 };
 
+const FECHA = new Date();
+const nDIA = FECHA.getDate();
+const MES = FECHA.getMonth() + 1;
+const ANO = FECHA.getFullYear();
 
-  const FECHA = new Date();
-  //const DIA = FECHA.getFullYear();
-  const nDIA = FECHA.getDate();
-  const MES = FECHA.getMonth() + 1;
-  const ANO = FECHA.getFullYear();
+let nombresDias = [
+  "DOMINGO",
+  "LUNES",
+  "MARTES",
+  "MIERCOLES",
+  "JUEVES",
+  "VIERNES",
+  "SABADO",
+];
 
+let diaDeSemana = FECHA.getDay();
 
-  day.innerHTML = nDIA.toString() + " " + MES.toString() + " " + ANO.toString(); 
+let nombreDelDia = nombresDias[diaDeSemana];
 
+day.innerText =
+  nDIA.toString() + " - " + MES.toString() + " - " + ANO.toString();
 
-
+nombreDia.innerHTML = nombreDelDia;
 
 setInterval(RELOJ, 1000);
- console.log(FECHA);
- 
