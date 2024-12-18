@@ -1,0 +1,123 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+ 
+  background-color: black;
+}
+.clock-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  border: solid 2px red;
+  
+}
+
+  .clock {
+    min-width: 31.25rem;
+    min-height: 31.25rem;
+    font-size: 3rem;
+    position: relative;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(circle, blue, rgb(2, 2, 41));
+    border: solid 5px yellow;
+  }
+    .digit {
+      transform: rotate(calc(30deg * var(--n)));
+      position: absolute;
+      top: 0.937rem;
+      bottom: 0.937rem;
+      color: white;
+      text-shadow: 0 0 20px yellow;
+    }
+    .center {
+      position: absolute;
+      width: 1.56rem;
+      height: 1.56rem;
+      background-color: white;
+      border-radius: 50%;
+      border: solid 5px black;
+    }
+    .hours,
+    .minutes,
+    .seconds {
+      --rotate: 0;
+      position: absolute;
+      bottom: 50%;
+      transform: rotate(calc(var(--rotate) * 1deg));
+      transform-origin: bottom;
+    }
+    .hours {
+      width: 0.75rem;
+      height: 8.12rem;
+      background-color: black;
+    
+    }
+    .minutes {
+      width: 0.65rem;
+      height: 11.9rem;
+      background-color: yellow;
+    }
+
+    .seconds {
+      width: 0.4rem;
+      height: 13rem;
+      background-color: red;
+    }
+  
+    .dia {
+      display: flex;
+      width: 8.5rem;
+      height: 2.5rem;
+      background-color: white;
+      position: absolute;
+      right: 5rem;
+      border-radius: 5px;
+      font-size: 1.5rem ;
+      font-weight: bolder;
+      justify-content: center;
+      align-items: center;
+  
+      }
+    
+
+  .clock::before {
+    content: "";
+    min-width: 32.8rem;
+    min-height: 32.8rem;
+    position: absolute;
+    border-radius: 50%;
+    background-image: linear-gradient(rgb(12, 12, 67), black);
+    box-shadow: 0 0 15px 15px gray;
+    z-index: -1;
+    border: solid 2px rgb(38, 209, 252);
+  }
+
+
+
+
+
+/* MEDIA-------------------------*/
+
+/*@media (min-width: 320px) and (max-width: 360px) {
+
+}
+
+@media (min-width: 361px) and (max-width: 520px) {
+
+}
+
+@media (min-width: 521px) and (max-width: 1024px) {
+  
+}*/
+
+
+
