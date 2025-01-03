@@ -5,6 +5,9 @@ const day = document.querySelector(".dia");
 const nombreDia = document.querySelector(".nombreDia");
 const horaDigital = document.querySelector(".horaDigital");
 const pajaroCucu = document.querySelector(".cucu");
+const toggleButton = document.getElementById("toggleButton");
+const icon1 = document.getElementById("icon1");
+const icon2 = document.getElementById("icon2");
 
 const FECHA = new Date();
 const nDIA = FECHA.getDate();
@@ -67,7 +70,11 @@ const RelojDigital = () => {
 
 setInterval(RelojDigital, 1000);
 
+let cucuActivo = true;
+
 const CUCU = () => {
+  if (!cucuActivo) return;
+
   const DATE = new Date();
   const SEGUNDOS = DATE.getSeconds() / 60;
   const MINUTOS = (SEGUNDOS + DATE.getMinutes()) / 60;
@@ -84,3 +91,14 @@ const CUCU = () => {
 };
 
 setInterval(CUCU, 1000);
+
+toggleButton.addEventListener("click", () => {
+  cucuActivo = !cucuActivo;
+  if (icon1.style.display === "none") {
+    icon1.style.display = "block";
+    icon2.style.display = "none";
+  } else {
+    icon1.style.display = "none";
+    icon2.style.display = "block";
+  }
+});
