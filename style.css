@@ -15,19 +15,19 @@ body {
   align-items: center;
   width: 100vw;
   height: 100vh;
-  position: relative;
+  position: absolute;
 }
 .boton {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: relative;
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
   z-index: 1;
-  right: 33.5rem;
-  bottom: 18.5rem;
+  right: -8rem;
+  bottom: 0rem;
   cursor: pointer;
   background-image: radial-gradient(circle, blue, rgb(2, 2, 41));
 }
@@ -346,10 +346,9 @@ i {
   .boton {
     width: 2.5rem;
     height: 2.5rem;
-    position: absolute;
+    position: relative;
     z-index: 1;
-    right: 10rem;
-    bottom: 18.7rem;
+    right: -4.5rem;
     cursor: pointer;
   }
   .sonido {
