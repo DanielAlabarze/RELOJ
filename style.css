@@ -15,6 +15,40 @@ body {
   height: 100vh;
   position: relative;
 }
+.boton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  z-index: 1;
+  right: 33.5rem;
+  bottom: 18.5rem;
+  cursor: pointer;
+  background-image: radial-gradient(circle, blue, rgb(2, 2, 41));
+}
+
+i {
+  font-size: 1.9rem;
+  color: white;
+  border-radius: 50%;
+  background-image: radial-gradient(circle, blue, rgb(2, 2, 41));
+}
+
+#icon2 {
+  display: none;
+}
+
+.sonido {
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: transparent;
+}
+
 .cucu {
   width: 8rem;
   height: 8rem;
@@ -89,7 +123,7 @@ body {
   height: 9rem;
   background-color: black;
   border-radius: 50%;
-  z-index: 1;
+  z-index: 2;
   box-shadow: 5px 0 5px 2px rgba(1, 12, 29, 0.795);
   border: solid 1px gray;
 }
@@ -98,7 +132,7 @@ body {
   height: 11.9rem;
   background-color: yellow;
   border-radius: 50%;
-  z-index: 2;
+  z-index: 3;
   box-shadow: 5px 0 5px 2px rgba(1, 12, 29, 0.795);
   border: solid 1px gray;
 }
@@ -108,7 +142,7 @@ body {
   height: 13rem;
   background-color: red;
   border-radius: 50%;
-  z-index: 3;
+  z-index: 4;
   box-shadow: 3px 0 5px 2px rgba(1, 12, 29, 0.795);
   border: solid 1px gray;
 }
@@ -203,6 +237,7 @@ body {
     border-radius: 50%;
     border: solid 3px black;
     z-index: 5;
+    box-shadow: 2px 0 4px 2px rgba(1, 12, 29, 0.795);
   }
   .hours,
   .minutes,
@@ -219,6 +254,7 @@ body {
     background-color: black;
     border-radius: 50%;
     z-index: 1;
+    box-shadow: 2px 0 4px 2px rgba(1, 12, 29, 0.795);
   }
   .minutes {
     width: 0.4rem;
@@ -226,6 +262,7 @@ body {
     background-color: yellow;
     border-radius: 50%;
     z-index: 2;
+    box-shadow: 2px 0 4px 2px rgba(1, 12, 29, 0.795);
   }
 
   .seconds {
@@ -233,6 +270,7 @@ body {
     height: 7rem;
     background-color: red;
     z-index: 3;
+    box-shadow: 2px 0 4px 2px rgba(1, 12, 29, 0.795);
   }
 
   .horaDigital {
@@ -300,5 +338,25 @@ body {
     width: 4.5rem;
     height: 4.5rem;
     border: solid 0.3rem red;
+  }
+
+  .boton {
+    width: 2.5rem;
+    height: 2.5rem;
+    position: absolute;
+    z-index: 1;
+    right: 10rem;
+    bottom: 18.7rem;
+    cursor: pointer;
+  }
+  .sonido {
+    width: 2.3rem;
+    height: 2.3rem;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  i {
+    font-size: 1.5rem;
   }
 }
