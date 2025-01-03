@@ -93,6 +93,7 @@ body {
   border-radius: 50%;
   z-index: 1;
   box-shadow: 5px 0 5px 2px rgba(1, 12, 29, 0.795);
+  border: solid 1px gray;
 }
 .minutes {
   width: 0.65rem;
@@ -101,6 +102,7 @@ body {
   border-radius: 50%;
   z-index: 2;
   box-shadow: 5px 0 5px 2px rgba(1, 12, 29, 0.795);
+  border: solid 1px gray;
 }
 
 .seconds {
@@ -110,6 +112,7 @@ body {
   border-radius: 50%;
   z-index: 3;
   box-shadow: 3px 0 5px 2px rgba(1, 12, 29, 0.795);
+  border: solid 1px gray;
 }
 
 .horaDigital {
