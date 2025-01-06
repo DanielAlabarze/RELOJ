@@ -16,27 +16,24 @@
       href="./img/reloj.ico" 
     />
     <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-  />
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
     <link rel="stylesheet" href="style.css" />
-
   </head>
   <body>
     <section class="clock-container">
-
-     
-
       <div class="cucu">
         <img class="pajarito" src="./img/pajarito.jpg" alt="Pajarito" />
       </div>
 
       <div class="clock">
-
- <div class="boton">
-        <button id="toggleButton" class="sonido"><i id="icon1" class="bi bi-volume-up"></i><i id="icon2" class="bi bi-volume-mute"></i></button>
-      </div>
-     
+        <div class="boton">
+          <button id="toggleButton" class="sonido">
+            <i id="icon1" class="bi bi-volume-up"></i
+            ><i id="icon2" class="bi bi-volume-mute"></i>
+          </button>
+        </div>
 
         <p class="digit" style="--n: 1">1</p>
         <p class="digit" style="--n: 2">2</p>
@@ -50,8 +47,16 @@
         <p class="digit" style="--n: 10">10</p>
         <p class="digit" style="--n: 11">11</p>
         <p class="digit" style="--n: 12">12</p>
-        <div class="hours"></div>
-        <div class="minutes"></div>
+        <div class="hours">
+          <div class="puntaHoras"></div>
+          <div class="centroHoras"></div>
+          <div class="baseHoras"></div>
+        </div>
+        <div class="minutes">
+          <div class="puntaMinutos"></div>
+          <div class="centroMinutos"></div>
+          <div class="baseMinuto"></div>
+        </div>
         <div class="seconds"></div>
         <div class="center"></div>
         <div class="horaDigital"></div>

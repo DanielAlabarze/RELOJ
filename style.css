@@ -17,6 +17,7 @@ body {
   height: 100vh;
   position: absolute;
 }
+
 .boton {
   display: flex;
   justify-content: center;
@@ -83,7 +84,8 @@ i {
 .clock {
   min-width: 31.25rem;
   min-height: 31.25rem;
-  font-size: 3rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.5rem;
   position: relative;
   border-radius: 50%;
   display: flex;
@@ -121,32 +123,85 @@ i {
   transform-origin: bottom;
 }
 .hours {
-  width: 0.75rem;
-  height: 9rem;
-  background-color: black;
-  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   z-index: 2;
-  box-shadow: 5px 0 5px 2px rgba(1, 12, 29, 0.795);
-  border: solid 1px gray;
 }
-.minutes {
-  width: 0.65rem;
-  height: 11.9rem;
-  background-color: yellow;
-  border-radius: 50%;
-  z-index: 3;
+
+.baseHoras {
+  width: 0.5rem;
+  height: 2rem;
+  z-index: 2;
+  background-color: transparent;
   box-shadow: 5px 0 5px 2px rgba(1, 12, 29, 0.795);
-  border: solid 1px gray;
+  border: solid 0.15rem white;
+  border-radius: 5px 5px 0 0;
+}
+
+.centroHoras {
+  width: 0.7rem;
+  height: 5rem;
+  border-radius: 0 0 5px 5px;
+  z-index: 2;
+  background-color: transparent;
+  box-shadow: 5px 0 5px 2px rgba(1, 12, 29, 0.795);
+  border: solid 0.15rem white;
+}
+
+.puntaHoras {
+  width: 1.5rem;
+  height: 2rem;
+  background-color: black;
+  z-index: 2;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  box-shadow: 5px 0 5px 2px rgba(1, 12, 29, 0.795);
+}
+
+.minutes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.baseMinuto {
+  width: 0.5rem;
+  height: 2rem;
+  z-index: 3;
+  background-color: transparent;
+  box-shadow: 5px 0 5px 2px rgba(1, 12, 29, 0.795);
+  border: solid 0.15rem white;
+  border-radius: 5px 5px 0 0;
+}
+
+.centroMinutos {
+  width: 0.7rem;
+  height: 7.5rem;
+  border-radius: 0 0 5px 5px;
+  z-index: 3;
+  background-color: transparent;
+  box-shadow: 5px 0 5px 2px rgba(1, 12, 29, 0.795);
+  border: solid 0.15rem white;
+}
+
+.puntaMinutos {
+  width: 1.5rem;
+  height: 2rem;
+  background-color: black;
+  z-index: 3;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  box-shadow: 5px 0 5px 2px rgba(1, 12, 29, 0.795);
 }
 
 .seconds {
-  width: 0.3rem;
+  width: 0.2rem;
   height: 13rem;
   background-color: red;
-  border-radius: 50%;
   z-index: 4;
   box-shadow: 3px 0 5px 2px rgba(1, 12, 29, 0.795);
-  border: solid 1px gray;
 }
 
 .horaDigital {
@@ -156,7 +211,7 @@ i {
   position: absolute;
   width: 8.8rem;
   height: 3rem;
-  bottom: 20rem;
+  bottom: 19.2rem;
   right: 10.7rem;
   background-image: radial-gradient(circle, blue, rgb(2, 2, 41));
   color: white;
@@ -213,7 +268,7 @@ i {
   .clock {
     min-width: 18rem;
     min-height: 18rem;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     position: relative;
     border-radius: 50%;
     display: flex;
@@ -250,21 +305,35 @@ i {
     transform: rotate(calc(var(--rotate) * 1deg));
     transform-origin: bottom;
   }
-  .hours {
-    width: 0.5rem;
-    height: 5rem;
-    background-color: black;
-    border-radius: 50%;
-    z-index: 1;
-    box-shadow: 2px 0 4px 2px rgba(1, 12, 29, 0.795);
-  }
-  .minutes {
+
+  .baseHoras {
     width: 0.4rem;
-    height: 6rem;
-    background-color: yellow;
-    border-radius: 50%;
-    z-index: 2;
-    box-shadow: 2px 0 4px 2px rgba(1, 12, 29, 0.795);
+    height: 1.5rem;
+  }
+
+  .centroHoras {
+    width: 0.6rem;
+    height: 2.5rem;
+  }
+
+  .puntaHoras {
+    width: 1rem;
+    height: 1.1rem;
+  }
+
+  .baseMinuto {
+    width: 0.4rem;
+    height: 1.5rem;
+  }
+
+  .centroMinutos {
+    width: 0.6rem;
+    height: 3.9rem;
+  }
+
+  .puntaMinutos {
+    width: 1rem;
+    height: 1.1rem;
   }
 
   .seconds {
